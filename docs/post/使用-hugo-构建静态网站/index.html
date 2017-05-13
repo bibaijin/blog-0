@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="blog" name="keywords">
+<meta content="Bibai Jin" name="author">
+<meta property="og:title" content="使用 hugo 构建静态网站 - 博客 | 金比白">
+<meta property="og:url" content="https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/">
+<meta property="og:description" content="金比白的博客">
+<meta property="og:type" content="website" />
+<title>使用 hugo 构建静态网站 | 博客 | 金比白</title>
+<link rel="stylesheet" href="https://bibaijin.github.io/my-blog//css/style.css">
+<link rel="shortcut icon" href="https://bibaijin.github.io/my-blog//wave.ico">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://bibaijin.github.io/my-blog/"><h1 class="title is-4">博客 | 金比白</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/bibaijin" target="_blank">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml" target="_blank">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">使用 hugo 构建静态网站</h1>
+    <h2 class="subtitle is-5">May 13, 2017 by Bibai Jin</h2>
+    
+      <div class="tags">
+    
+        <a class="button is-link" href="/my-blog/tags/blog">blog</a>
+    
+        <a class="button is-link" href="/my-blog/tags/hugo">hugo</a>
+    
+</div>
+
+    
+    <div class="content">
+      
+
+<h2 id="介绍">介绍</h2>
+
+<p>hugo 是一个静态网站生成器。它使用 go 语言编写，运行时依赖少，跨平台支持好；
+社区庞大，主题样式丰富，是生成博客或文档的好选择。</p>
+
+<h2 id="安装">安装</h2>
+
+<p>只要<a href="https://github.com/spf13/hugo/releases">下载对应平台的二进制文件</a>即可运行。</p>
+
+<h2 id="生成静态网站">生成静态网站</h2>
+
+<h3 id="新建工程">新建工程</h3>
+
+<pre><code>hugo new site ${project-name}
+</code></pre>
+
+<h3 id="安装主题">安装主题</h3>
+
+<pre><code>cd ${project-name}
+git submodule add https://github.com/mgjohansen/hucore.git themes/hucore
+</code></pre>
+
+<h3 id="添加博客">添加博客</h3>
+
+<pre><code>cd ${project-name}
+hugo new post/&lt;FILENAME&gt;.&lt;FORMAT&gt;
+# 编辑 post/&lt;FILENAME&gt;.&lt;FORMAT&gt;，保存
+</code></pre>
+
+<h3 id="本地预览">本地预览</h3>
+
+<pre><code>cd ${project-name}
+hugo server
+</code></pre>
+
+<h3 id="生成">生成</h3>
+
+<pre><code>cd ${project-name}
+hugo  # 生成的网站默认保存在 public/ 目录下
+</code></pre>
+
+<h2 id="部署到-github-pages">部署到 Github Pages</h2>
+
+<p>Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。Pages 可以使用
+工程的 <code>docs/</code> 目录部署静态页面，因此可以把 hugo 的生成目录改为 <code>docs</code>，即</p>
+
+<pre><code>cd ${project-name}
+echo 'publishDir = &quot;docs&quot;' &gt;&gt; config.toml
+</code></pre>
+
+<p>然后生成网站，并将工程文件推送到 Github，</p>
+
+<pre><code>cd ${project-name}
+hugo
+git push origin master
+</code></pre>
+
+<p>便可以在 https://${username}.github.io/${project-name} 访问我们的静态网站了。</p>
+
+    </div>
+    
+        <div class="nav-left">
+    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbibaijin.github.io%2fmy-blog%2fpost%2f%25E4%25BD%25BF%25E7%2594%25A8-hugo-%25E6%259E%2584%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E7%25BD%2591%25E7%25AB%2599%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fbibaijin.github.io%2fmy-blog%2fpost%2f%25E4%25BD%25BF%25E7%2594%25A8-hugo-%25E6%259E%2584%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E7%25BD%2591%25E7%25AB%2599%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbibaijin.github.io%2fmy-blog%2fpost%2f%25E4%25BD%25BF%25E7%2594%25A8-hugo-%25E6%259E%2584%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E7%25BD%2591%25E7%25AB%2599%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://twitter.com/home?status=%e4%bd%bf%e7%94%a8%20hugo%20%e6%9e%84%e5%bb%ba%e9%9d%99%e6%80%81%e7%bd%91%e7%ab%99 - https%3a%2f%2fbibaijin.github.io%2fmy-blog%2fpost%2f%25E4%25BD%25BF%25E7%2594%25A8-hugo-%25E6%259E%2584%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E7%25BD%2591%25E7%25AB%2599%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+    <a class="nav-item" href="http://www.reddit.com/submit?url=https%3a%2f%2fbibaijin.github.io%2fmy-blog%2fpost%2f%25E4%25BD%25BF%25E7%2594%25A8-hugo-%25E6%259E%2584%25E5%25BB%25BA%25E9%259D%2599%25E6%2580%2581%25E7%25BD%2591%25E7%25AB%2599%2f&title=%e4%bd%bf%e7%94%a8%20hugo%20%e6%9e%84%e5%bb%ba%e9%9d%99%e6%80%81%e7%bd%91%e7%ab%99" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2017 | 金比白 ♥</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/dockerfile.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
