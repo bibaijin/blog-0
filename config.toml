@@ -1,0 +1,30 @@
+baseURL =  "https://bibaijin.github.io/my-blog/"
+languageCode = "zh"
+title = "Blog | Bibaijin"
+theme = "Hucore"
+publishDir = "docs"
+copyright = "&copy; 2017 | Bibai Jin ♥"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+description = "Bibaijin's Blog"
+keywords = ["blog"]
+author = "Bibai Jin"
+sharingicons = true
+displayauthor = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/bibaijin"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
