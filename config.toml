@@ -1,16 +1,16 @@
 baseURL =  "https://bibaijin.github.io/my-blog/"
 languageCode = "zh"
-title = "Blog | Bibaijin"
+title = "博客 | 金比白"
 theme = "Hucore"
 publishDir = "docs"
-copyright = "&copy; 2017 | Bibai Jin ♥"
+copyright = "&copy; 2017 | 金比白 ♥"
 
 [taxonomies]
 tag = "tags"
 category = "categories"
 
 [params]
-description = "Bibaijin's Blog"
+description = "金比白的博客"
 keywords = ["blog"]
 author = "Bibai Jin"
 sharingicons = true
