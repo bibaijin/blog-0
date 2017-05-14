@@ -3,7 +3,6 @@ title = "使用 hugo 构建静态网站"
 date = "2017-05-13T13:35:22+08:00"
 categories = ["技术"]
 tags = ["blog","hugo"]
-menu = "main"
 +++
 
 ## 介绍
@@ -54,20 +53,35 @@ hugo  # 生成的网站默认保存在 public/ 目录下
 
 ## 部署到 Github Pages
 
-Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。Pages 可以使用
-工程的 `docs/` 目录部署静态页面，因此可以把 hugo 的生成目录改为 `docs`，即
+Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。以下使用工程的
+`docs/` 目录部署静态页面。
+
+### 新建 Github 仓库
+
+- 在 https://github.com 新建仓库
+- 在本地工程里配置 git 远程分支：
+  `git remote add origin git@github.com:${username}/${project-name}.git`
+
+### 生成网站
+
+首先，把 hugo 的生成目录改为 `docs`，即
 
 ```
 cd ${project-name}
 echo 'publishDir = "docs"' >> config.toml
 ```
 
-然后生成网站，并将工程文件推送到 Github，
+然后，生成网站，并将工程文件推送到 Github，
 
 ```
 cd ${project-name}
-hugo
-git push origin master
+hugo  # 生成网站
+git push origin master  # 将源代码推送到 github
 ```
 
-便可以在 https://${username}.github.io/${project-name} 访问我们的静态网站了。
+### 设置 Github Pages
+
+- 在 Github 对仓库进行设置，选择 `master branch /docs folder` 作为 Pages 的源。
+
+现在，应该可以在 https://${username}.github.io/${project-name}
+访问我们的静态网站了。

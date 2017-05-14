@@ -3,13 +3,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="blog" name="keywords">
-<meta content="Bibai Jin" name="author">
+<meta content="金比白" name="author">
 <meta property="og:title" content="技术 - 博客 | 金比白">
 <meta property="og:url" content="https://bibaijin.github.io/my-blog/categories/%E6%8A%80%E6%9C%AF/">
 <meta property="og:description" content="金比白的博客">
 <meta property="og:type" content="website" />
 <title>技术 | 博客 | 金比白</title>
 <link rel="stylesheet" href="https://bibaijin.github.io/my-blog//css/style.css">
+
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto&#43;Mono">
+<style>
+    body, input {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    }
+    pre, code {
+    font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+    }
+</style>
 <link rel="shortcut icon" href="https://bibaijin.github.io/my-blog//wave.ico">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -48,7 +60,7 @@
     
     <article>
       <h1 class="title"><a href="https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/">使用 hugo 构建静态网站</a></h1>
-      <h2 class="subtitle is-5">May 13, 2017</h2>
+      <h2 class="subtitle is-5">2017-05-13</h2>
       
         <div class="tags">
     
@@ -62,8 +74,8 @@
       <div class="content">
         介绍 hugo 是一个静态网站生成器。它使用 go 语言编写，运行时依赖少，跨平台支持好； 社区庞大，主题样式丰富，是生成博客或文档的好选择。
 安装 只要下载对应平台的二进制文件即可运行。
-生成静态网站 新建工程 hugo new site ${project-name}  安装主题 cd ${project-name} git submodule add https://github.com/mgjohansen/hucore.git themes/hucore  添加博客 cd ${project-name} hugo new post/&lt;FILENAME&gt;.&lt;FORMAT&gt; # 编辑 post/&lt;FILENAME&gt;.&lt;FORMAT&gt;，保存  本地预览 cd ${project-name} hugo server  生成 cd ${project-name} hugo # 生成的网站默认保存在 public/ 目录下  部署到 Github Pages Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。Pages 可以使用 工程的 docs/ 目录部署静态页面，因此可以把 hugo 的生成目录改为 docs，即
-cd ${project-name} echo 'publishDir = &quot;docs&quot;' &gt;&gt; config.
+生成静态网站 新建工程 hugo new site ${project-name}  安装主题 cd ${project-name} git submodule add https://github.com/mgjohansen/hucore.git themes/hucore  添加博客 cd ${project-name} hugo new post/&lt;FILENAME&gt;.&lt;FORMAT&gt; # 编辑 post/&lt;FILENAME&gt;.&lt;FORMAT&gt;，保存  本地预览 cd ${project-name} hugo server  生成 cd ${project-name} hugo # 生成的网站默认保存在 public/ 目录下  部署到 Github Pages Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。以下使用工程的 docs/ 目录部署静态页面。
+新建 Github 仓库  在 https://github.com 新建仓库 在本地工程里配置 git 远程分支： git remote add origin git@github.
         
         ...<a class="button is-link" href="https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="height:28px">
           Read more

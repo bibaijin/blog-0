@@ -4,13 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta content="blog" name="keywords">
-<meta content="Bibai Jin" name="author">
+<meta content="金比白" name="author">
 <meta property="og:title" content="使用 hugo 构建静态网站 - 博客 | 金比白">
 <meta property="og:url" content="https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/">
 <meta property="og:description" content="金比白的博客">
 <meta property="og:type" content="website" />
 <title>使用 hugo 构建静态网站 | 博客 | 金比白</title>
 <link rel="stylesheet" href="https://bibaijin.github.io/my-blog//css/style.css">
+
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto&#43;Mono">
+<style>
+    body, input {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    }
+    pre, code {
+    font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+    }
+</style>
 <link rel="shortcut icon" href="https://bibaijin.github.io/my-blog//wave.ico">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -47,9 +59,9 @@
 <section class="section">
   <div class="container">
     <h1 class="title">使用 hugo 构建静态网站</h1>
-    <h2 class="subtitle is-5">May 13, 2017 by Bibai Jin</h2>
+    <h2 class="subtitle is-5">2017-05-13 by 金比白</h2>
     
-      <div class="tags">
+    <div class="tags">
     
         <a class="button is-link" href="/my-blog/tags/blog">blog</a>
     
@@ -104,21 +116,40 @@ hugo  # 生成的网站默认保存在 public/ 目录下
 
 <h2 id="部署到-github-pages">部署到 Github Pages</h2>
 
-<p>Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。Pages 可以使用
-工程的 <code>docs/</code> 目录部署静态页面，因此可以把 hugo 的生成目录改为 <code>docs</code>，即</p>
+<p>Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。以下使用工程的
+<code>docs/</code> 目录部署静态页面。</p>
+
+<h3 id="新建-github-仓库">新建 Github 仓库</h3>
+
+<ul>
+<li>在 <a href="https://github.com">https://github.com</a> 新建仓库</li>
+<li>在本地工程里配置 git 远程分支：
+<code>git remote add origin git@github.com:${username}/${project-name}.git</code></li>
+</ul>
+
+<h3 id="生成网站">生成网站</h3>
+
+<p>首先，把 hugo 的生成目录改为 <code>docs</code>，即</p>
 
 <pre><code>cd ${project-name}
 echo 'publishDir = &quot;docs&quot;' &gt;&gt; config.toml
 </code></pre>
 
-<p>然后生成网站，并将工程文件推送到 Github，</p>
+<p>然后，生成网站，并将工程文件推送到 Github，</p>
 
 <pre><code>cd ${project-name}
-hugo
-git push origin master
+hugo  # 生成网站
+git push origin master  # 将源代码推送到 github
 </code></pre>
 
-<p>便可以在 https://${username}.github.io/${project-name} 访问我们的静态网站了。</p>
+<h3 id="设置-github-pages">设置 Github Pages</h3>
+
+<ul>
+<li>在 Github 对仓库进行设置，选择 <code>master branch /docs folder</code> 作为 Pages 的源。</li>
+</ul>
+
+<p>现在，应该可以在 https://${username}.github.io/${project-name}
+访问我们的静态网站了。</p>
 
     </div>
     

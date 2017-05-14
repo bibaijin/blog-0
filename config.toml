@@ -12,7 +12,7 @@ category = "categories"
 [params]
 description = "金比白的博客"
 keywords = ["blog"]
-author = "Bibai Jin"
+author = "金比白"
 sharingicons = true
 displayauthor = true
 
@@ -28,3 +28,6 @@ fa_icon = "fa-github"
 url = "/index.xml"
 fa_icon = "fa-rss"
 
+[params.font]
+text = "Roboto"
+code = "Roboto Mono"
