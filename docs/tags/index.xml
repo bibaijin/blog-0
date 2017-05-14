@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 博客 | 金比白</title>
-    <link>https://bibaijin.github.io/my-blog/tags/</link>
+    <link>https://bibaijin.github.io/blog/tags/</link>
     <description>Recent content in Tags on 博客 | 金比白</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2017 | 金比白 ♥</copyright>
     <lastBuildDate>Sat, 13 May 2017 13:35:22 +0800</lastBuildDate>
     
-	<atom:link href="https://bibaijin.github.io/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bibaijin.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>https://bibaijin.github.io/my-blog/tags/blog/</link>
+      <link>https://bibaijin.github.io/blog/tags/blog/</link>
       <pubDate>Sat, 13 May 2017 13:35:22 +0800</pubDate>
       
-      <guid>https://bibaijin.github.io/my-blog/tags/blog/</guid>
+      <guid>https://bibaijin.github.io/blog/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://bibaijin.github.io/my-blog/tags/hugo/</link>
+      <link>https://bibaijin.github.io/blog/tags/hugo/</link>
       <pubDate>Sat, 13 May 2017 13:35:22 +0800</pubDate>
       
-      <guid>https://bibaijin.github.io/my-blog/tags/hugo/</guid>
+      <guid>https://bibaijin.github.io/blog/tags/hugo/</guid>
       <description></description>
     </item>
     

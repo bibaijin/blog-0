@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 | 金比白</title>
-    <link>https://bibaijin.github.io/my-blog/</link>
+    <link>https://bibaijin.github.io/blog/</link>
     <description>Recent content on 博客 | 金比白</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2017 | 金比白 ♥</copyright>
     <lastBuildDate>Sat, 13 May 2017 13:35:22 +0800</lastBuildDate>
     
-	<atom:link href="https://bibaijin.github.io/my-blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bibaijin.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用 hugo 构建静态网站</title>
-      <link>https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</link>
+      <link>https://bibaijin.github.io/blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 13 May 2017 13:35:22 +0800</pubDate>
       
-      <guid>https://bibaijin.github.io/my-blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://bibaijin.github.io/blog/post/%E4%BD%BF%E7%94%A8-hugo-%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</guid>
       <description>介绍 hugo 是一个静态网站生成器。它使用 go 语言编写，运行时依赖少，跨平台支持好； 社区庞大，主题样式丰富，是生成博客或文档的好选择。
 安装 只要下载对应平台的二进制文件即可运行。
 生成静态网站 新建工程 hugo new site ${project-name}  安装主题 cd ${project-name} git submodule add https://github.com/mgjohansen/hucore.git themes/hucore  添加博客 cd ${project-name} hugo new post/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt; # 编辑 post/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;，保存  本地预览 cd ${project-name} hugo server  生成 cd ${project-name} hugo # 生成的网站默认保存在 public/ 目录下  部署到 Github Pages Github Pages 是一个免费的静态页面服务，可以将博客部署在上面。以下使用工程的 docs/ 目录部署静态页面。

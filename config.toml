@@ -1,9 +1,10 @@
-baseURL =  "https://bibaijin.github.io/my-blog/"
+baseURL =  "https://bibaijin.github.io/blog/"
 languageCode = "zh"
 title = "博客 | 金比白"
 theme = "Hucore"
 publishDir = "docs"
 copyright = "&copy; 2017 | 金比白 ♥"
+disqusShortname = "bibaijin-blog"
 
 [taxonomies]
 tag = "tags"
